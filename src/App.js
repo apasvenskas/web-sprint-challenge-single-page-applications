@@ -1,19 +1,17 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import pizzaForm from "./pizzaForm";
+import PizzaForm from "./Components/pizzaForm";
+import SouceRadio from "./Components/SouceRadio";
+import ToppingsCheck from "./Components/ToppingsCheck";
 import { useState } from "react";
 
-function Dropdown(){
-  const[isOpen, setIsOpen] = useState(false); 
-  const[selectedOption]= useState(null);
-  const options = pizzaForm
-  const toggleDropdown = () => setIsOpen(!isOpen);
-}
+ 
 
 const App = () => {
   return (
     <BrowserRouter>
       <h1>Lambda Eats</h1>
+     
       <section className="heading">
         <div>
           <p>Create Your Own Pizza</p>
@@ -26,7 +24,19 @@ const App = () => {
       <section>
         <h3>Pizza Size</h3>
         <div>
-          <button className="dropdown"></button>
+          <PizzaForm />
+        </div>
+      </section>
+      <section>
+        <h3>Choice of Souce</h3>
+        <div>
+          <SouceRadio />
+        </div>
+      </section>
+      <section>
+        <h3>Choose your Toppings</h3>
+        <div>
+          <ToppingsCheck />
         </div>
       </section>
     </BrowserRouter>
