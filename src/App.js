@@ -1,45 +1,19 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import PizzaForm from "./Components/pizzaForm";
-import SouceRadio from "./Components/SouceRadio";
-import ToppingsCheck from "./Components/ToppingsCheck";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./Pages/Home";
+import FoodForm from "./Pages/FoodForm";
 
- 
-
-const App = () => {
+export default function App() {
   return (
-    <BrowserRouter>
-      <h1>Lambda Eats</h1>
-     
-      <section className="heading">
-        <div>
-          <p>Create Your Own Pizza</p>
-        </div>
-        <div>
-          <button>Home</button>
-          <button>Help</button>
-        </div>
-      </section>
-      <section>
-        <h3>Pizza Size</h3>
-        <div>
-          <PizzaForm />
-        </div>
-      </section>
-      <section>
-        <h3>Choice of Souce</h3>
-        <div>
-          <SouceRadio />
-        </div>
-      </section>
-      <section>
-        <h3>Choose your Toppings</h3>
-        <div>
-          <ToppingsCheck />
-        </div>
-      </section>
-    </BrowserRouter>
-  );
-};
-export default App;
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/FoodForm" element={<FoodForm />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
