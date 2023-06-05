@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const PizzaForm= () => {
+const Dropdown= () => {
   //const { values, order } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null); 
@@ -45,7 +45,7 @@ const handleOptionClick = (option) => {
   );
 };
 
-export default PizzaForm; 
+export default Dropdown; 
 
 
 /*Size

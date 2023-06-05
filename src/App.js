@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home";
-import FoodForm from "./Pages/FoodForm";
+import PizzaForm from "./Pages/pizza-form";
+import Confirmation from "./Pages/Confirmation";
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/FoodForm" element={<FoodForm />} />
+          <Route path="/pizza-form" element={<PizzaForm />} />
+          <Route path="/pizza-form/Confirmation" element={<Confirmation />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h2, h4, h5, h6, p, ol, ul {
+    margin: 0.5%;
+    padding: 1%;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+
+
+
+  .home {
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 0%;
+    padding-bottom: .5%;
+  }
+
+  .nav {
+    text-align: right;
+    padding-right: 5%;
+    padding-bottom: 3%;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+  .pizza {
+    padding-top: 5%;
+    padding-bottom: 8%;
+    background-image: url(https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  }
+
+  button{
+    margin-top: 3%;
+  }
+
+  h3 {
+    text-align: left;
+    padding-bottom: 3%;
+    margin-left: 10%;
+  }
+  .main-body {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    padding-bottom: 5%;
+  }
+
+  .McD {
+    padding-left: .5%;
+    padding-right: 5%;
+  }
+
+  .McD img{
+     max-height: 20rem;
+     max-width: 15rem;
+  }
+
+  .SweetGreen {
+    padding-left: 8%;
+    padding-right: 10%;
+  } 
+
+  .SweetGreen img {
+     max-height: 20rem;
+     width: 15rem;
+  }
+
+  .Starbucks {
+    padding-right: 1%;
+  }
+
+  .Starbucks img {
+    max-height: 20rem;
+    max-width: 15rem;
+  }

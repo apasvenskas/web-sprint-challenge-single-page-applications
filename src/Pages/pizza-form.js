@@ -1,23 +1,23 @@
 import React from "react";
 //import { BrowserRouter } from "react-router-dom";
-import PizzaForm from "../Components/pizzaForm";
+import Dropdown from "../Components/dropdown";
 import SouceRadio from "../Components/SouceRadio";
 import ToppingsCheck from "../Components/ToppingsCheck";
 import SubCheck from "../Components/SubCheck";
 import OrderBox from "../Components/OrderBox";
 import { Link } from "react-router-dom";
 
-const FoodForm = () => {
+const PizzaForm = () => {
   return (
     <>
       <h1>Lambda Eats</h1>
-
+      <form id="pizza-form">
       <section className="heading">
         <div>
           <p>Create Your Own Pizza</p>
         </div>
         <div>
-          <Link to="Home">
+          <Link to="/">
             <button>Home</button>
           </Link>
           <button>Help</button>
@@ -25,8 +25,8 @@ const FoodForm = () => {
       </section>
       <section>
         <h3>Pizza Size</h3>
-        <div>
-          <PizzaForm />
+        <div id="size-dropdown">
+          <Dropdown />
         </div>
       </section>
       <section>
@@ -49,7 +49,7 @@ const FoodForm = () => {
       </section>
       <section>
         <h3>Special Instructions</h3>
-        <div>
+        <div id="special-text">
           <input
             type="text"
             placeholder="Anything else you would like to add?"
@@ -59,11 +59,17 @@ const FoodForm = () => {
       <section>
         <h5>submit Order</h5>
         <div>
-          <OrderBox />
+            <OrderBox />
+          <div>
+           <Link to="/pizza-form/Confirmation">
+             <button>submit Order</button>
+            </Link>
+          </div>
         </div>
       </section>
+      </form>
       </>
   );
 };
 
-export default FoodForm;
+export default PizzaForm;
