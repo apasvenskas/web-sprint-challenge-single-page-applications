@@ -1,20 +1,24 @@
-import React from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home";
-import PizzaForm from "./Pages/pizza-form";
+import Pizza from "./Pages/Pizza";
 import Confirmation from "./Pages/Confirmation";
+import axios from "axios";
+
+
 
 export default function App() {
+  const [useEffect, setUseEffect] = useState('')
+  const [order, setOrder] = useState('')
   return (
     <div>
-      <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/pizza-form" element={<PizzaForm />} />
-          <Route path="/pizza-form/Confirmation" element={<Confirmation />} />
+          <Route path="/Pizza" element={<Pizza />} />
+          <Route path="/Pizza/Confirmation" element={<Confirmation />} />
         </Routes>
-      </BrowserRouter>
+
     </div>
   )
 }

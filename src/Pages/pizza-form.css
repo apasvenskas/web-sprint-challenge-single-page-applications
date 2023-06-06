@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h2, h4, h5, h6, p, ol, ul {
+    margin: 0.5%;
+    padding: 1%;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+  .nav{
+    padding-bottom: 5%;
+    text-align: right;
+
+  }
+  .nameInput {
+    text-align: center;
+  }
+  .create{
+    text-align: center;
+    padding-left: 5%;
+  }
+  .create img {
+    width: 50%;
+    height: 30rem;
+  }
+  .heading {
+    text-align: center;
+  }
+
+  .dropdown {
+    text-align: center;
+    padding-top: 0%;
+  }
+
+  h3 {
+    text-align: center;
+    padding-top: 1%;
+    margin-right: 10%;
+  }
+
+  .souce {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .souce input {
+    margin: 0 5px 0 20px;
+  }
+  .topppings {
+    text-align: center;
+  }
+
+  .checkBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -ms-flex-align: center;
+    padding: 1%;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+
+  }
+
+  .checkBox input {
+    margin: 0 5px 0 20px;
+  }
+
+  .subChoise {
+    text-align: center;
+  }
+
+  .special{
+    text-align: center;
+  }
+
+  .submit-order{
+    text-align: center;
+  }

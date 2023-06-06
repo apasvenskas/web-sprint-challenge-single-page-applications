@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 //import PizzaForm from "./pizza-form";
 //import img1 from "src\images\McD.jpg";
 
 //const img1 = require("./images/McD.jpg")
-
-const Home = () => {
+ const Home = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <h1>Lambda Eats</h1>
@@ -19,8 +19,8 @@ const Home = () => {
         </div>
         <div className="pizza">
           <h2>Your Favortite Food Delivery, While Coding</h2>
-          <Link to="/pizza-form">
-            <button>Pizza!</button>
+          <Link to="/Pizza">
+            <button onClick={() => navigate("/pizza")} id="order-pizza">Order Pizza</button>
           </Link>
         </div>
       </section>

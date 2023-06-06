@@ -28,7 +28,7 @@ function ToppingsCheck() {
     };
 
     return (
-        <div>
+        <div className="checkBox">
             {items.map((item) =>(
             <label key={item.id}>
                 <input 

@@ -16,14 +16,15 @@ const options = [
 
 const toggleDropdown = () => setIsOpen(!isOpen);
 
-const handleOptionClick = (option) => {
+const handleOptionClick = (e,option) => {
+  e.preventDefault()
   setSelectedOption(option);
   setIsOpen(false);
 };
 
   return (
     <form>
-    <div className="form_container">
+    <div className="size-select">
       <button onClick={toggleDropdown} className="dropdown">
         {selectedOption ? selectedOption.name : "Selected an option"}
       </button>
@@ -32,7 +33,7 @@ const handleOptionClick = (option) => {
           {options.map((option) => (
             <li 
               key={option.id} 
-              onClick={() => handleOptionClick(option)} 
+              onClick={(e) => handleOptionClick(e,option)} 
               className="list-item"
             >
               {option.name}
