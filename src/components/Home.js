@@ -2,10 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 //import PizzaForm from "./pizza-form";
-//import img1 from "src\images\McD.jpg";
 
-//const img1 = require("./images/McD.jpg")
- const Home = (props) => {
+export default function Home(props) {
   const navigate = useNavigate();
   return (
     <div className="home">
@@ -17,17 +15,22 @@ import "./Home.css";
           </Link>
           <button>Help</button>
         </div>
-        <div className="pizza">
-          <h2>Your Favortite Food Delivery, While Coding</h2>
+        <h2>Your Favortite Food Delivery, While Coding</h2>
+        <div className="pizza"> 
           <Link to="/Pizza">
-            <button onClick={() => navigate("/pizza")} id="order-pizza">Order Pizza</button>
+            <button onClick={() => navigate("/pizza")} id="order-pizza">
+              order-pizza
+            </button>
           </Link>
         </div>
       </section>
       <h3>Food Delivery in Gotham City</h3>
       <section className="main-body">
         <div className="McD">
-          <img src="https://images.unsplash.com/photo-1587361144243-03f7925381ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="McDonalds" />
+          <img
+            src="https://images.unsplash.com/photo-1587361144243-03f7925381ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+            alt="McDonalds"
+          />
           <h4>McDonals</h4>
           <p>$, American fast food, burger.</p>
           <div>
@@ -56,6 +59,6 @@ import "./Home.css";
       </section>
     </div>
   );
-};
+}
 
-export default Home;
+// export default Home;
