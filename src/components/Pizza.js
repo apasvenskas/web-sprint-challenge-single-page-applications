@@ -16,8 +16,9 @@ const initialFormState = {
   size: "",
   hasPepperoni: false,
   hasMushroom: false,
-  hasBannanaPepper: false,
-  hasPineapple: false,
+  hasHam: false,
+
+  hasBellPeppers: false,
   specialText: "",
 };
 
@@ -121,24 +122,28 @@ export default function Pizza(props) {
             <h3>Choose your Toppings</h3>
             <div className="toppingsCheck">
               <input
+                onChange={onChangeHandler}
                 name="hasPepperoni"
                 checked={formValues.hasPepperoni}
                 type="checkbox"
               />
               Pepperoni
               <input
+                onChange={onChangeHandler}
                 name="hasMushroom"
                 checked={formValues.hasMushroom}
                 type="checkbox"
               />
               Mushroom
               <input
+                onChange={onChangeHandler}
                 name="hasHam"
                 checked={formValues.hasHam}
                 type="checkbox"
               />
               Ham
               <input
+                onChange={onChangeHandler}
                 name="hasBellPeppers"
                 checked={formValues.hasBellPeppers}
                 type="checkbox"
@@ -155,7 +160,8 @@ export default function Pizza(props) {
             <h3>Special Instructions</h3>
             <div>
               <input
-                name="special-text"
+                onChange={onChangeHandler}
+                name="specialText"
                 value={formValues.specialText}
                 id="special-text"
                 type="text"
@@ -167,9 +173,9 @@ export default function Pizza(props) {
             <h3>Submit Order</h3>
             <div>
               <div>
-                {/* <Link to="/Pizza/Confirmation"> */}
+                <Link to="/Pizza/Confirmation">
                   <button id="order-button">Order</button>
-                {/* </Link> */}
+                </Link>
               </div>
             </div>
           </div>

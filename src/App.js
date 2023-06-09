@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           {/* <Route index element={<Home />} /> */}
           <Route path="/" element={<Home />} />
-          <Route path="/Pizza" element={<Pizza />} />
+          <Route path="/pizza" element={<Pizza />} />
           {/* <Route path="/Pizza/Confirmation" element={<Confirmation />} /> */}
         </Routes>
 

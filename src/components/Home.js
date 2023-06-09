@@ -17,7 +17,7 @@ export default function Home(props) {
         </div>
         <h2>Your Favortite Food Delivery, While Coding</h2>
         <div className="pizza"> 
-          <Link to="/Pizza">
+          <Link to="/pizza">
             <button onClick={() => navigate("/pizza")} id="order-pizza">
               order-pizza
             </button>
